@@ -4,7 +4,6 @@ import java.util.List;
 
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
 import static org.assertj.core.api.Assertions.*;
 import static pokerhands.logic.CardSuit.*;
 import static pokerhands.logic.CardValue.*;
