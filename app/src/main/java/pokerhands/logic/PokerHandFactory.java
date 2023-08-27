@@ -1,6 +1,10 @@
 package pokerhands.logic;
 
+import java.security.cert.CollectionCertStoreParameters;
+import java.util.Comparator;
 import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 import static pokerhands.logic.PokerHandType.*;
 
@@ -46,8 +50,15 @@ public class PokerHandFactory {
     }
 
     private boolean isStraight(List<Card> cards) {
-        // TODO implement
-        return false;
+        var sortedCards = cards.stream()
+            .sorted(Comparator.comparing(Card::value).reversed())
+            .toList();
+
+        return IntStream.range(0, sortedCards.size())
+            .map((int i) -> sortedCards.get(i).value().ordinal() + i)
+            .boxed()
+            .collect(Collectors.toSet())
+            .size() == 1;
     }
 
     private boolean isFourOfAKind(List<CardValueOccurrence> occurrences) {
