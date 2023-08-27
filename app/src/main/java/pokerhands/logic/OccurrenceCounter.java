@@ -6,11 +6,11 @@ import java.util.stream.Collectors;
 
 public class OccurrenceCounter {
     public List<CardValueOccurrence> countOccurences(List<Card> cards) {
-        return cards.stream().collect(Collectors.groupingBy(Card::getValue))
+        return cards.stream().collect(Collectors.groupingBy(Card::value))
             .entrySet().stream()
             .map(e -> new CardValueOccurrence(e.getKey(), e.getValue().size()))
-            .sorted(Comparator.comparing(CardValueOccurrence::getOccurrences)
-                    .thenComparing(CardValueOccurrence::getCardValue)
+            .sorted(Comparator.comparing(CardValueOccurrence::occurrences)
+                    .thenComparing(CardValueOccurrence::cardValue)
                     .reversed())
             .toList();
     }
