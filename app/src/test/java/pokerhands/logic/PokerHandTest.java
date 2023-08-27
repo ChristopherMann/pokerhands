@@ -41,7 +41,7 @@ class PokerHandTest {
     }
 
     @Test
-    void compareTo_SameHandTypeAndFirstHandHasHigherCard_SecondHandWins() {
+    void compareTo_SameHandTypeAndSecondHandHasHigherCard_SecondHandWins() {
         var firstHand = new PokerHand(TWO_PAIRS, List.of(
                 new CardValueOccurrence(THREE, 2),
                 new CardValueOccurrence(TWO, 2),

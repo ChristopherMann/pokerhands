@@ -104,7 +104,7 @@ class PokerHandFactoryTest {
                 new Card(DIAMONDS, SIX),
                 new Card(HEARTS, TWO),
                 new Card(SPADES, SIX),
-                new Card(CLUBS, TWO));
+                new Card(SPADES, TWO));
 
         var pokerHand = factory.createPokerHand(cards);
 
@@ -118,7 +118,7 @@ class PokerHandFactoryTest {
                 new Card(DIAMONDS, TWO),
                 new Card(HEARTS, SIX),
                 new Card(SPADES, TWO),
-                new Card(CLUBS, TWO));
+                new Card(HEARTS, TWO));
 
         var pokerHand = factory.createPokerHand(cards);
 

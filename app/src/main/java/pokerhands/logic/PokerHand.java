@@ -4,7 +4,7 @@ import java.util.List;
 
 /**
  * Represents a hand in five card poker. The hand can be compared
- * with other hand.
+ * with other hands.
  * @param handType The type of the hand.
  * @param occurrences The occurrences of the different card values in the hand.
  */
