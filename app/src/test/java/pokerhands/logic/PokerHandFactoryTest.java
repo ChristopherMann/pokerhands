@@ -10,7 +10,6 @@ import static pokerhands.logic.CardValue.*;
 import static pokerhands.logic.PokerHandType.*;
 
 class PokerHandFactoryTest {
-
     private final PokerHandFactory factory = new PokerHandFactory(new OccurrenceCounter());
 
     @Test

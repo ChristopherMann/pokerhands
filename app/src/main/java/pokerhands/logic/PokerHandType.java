@@ -1,5 +1,8 @@
 package pokerhands.logic;
 
+/**
+ * Represents the different types of poker hands.
+ */
 public enum PokerHandType {
     HIGH_CARD,
     PAIR,

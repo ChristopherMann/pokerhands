@@ -15,6 +15,11 @@ public class PokerHandFactory {
         this.occurrenceCounter = occurrenceCounter;
     }
 
+    /**
+     * Creates a poker hand for the given cards.
+     * @param cards The cards in the poker hand.
+     * @return The created poker hand.
+     */
     public PokerHand createPokerHand(List<Card> cards) {
         var occurrences = occurrenceCounter.countOccurences(cards);
 

@@ -1,9 +1,13 @@
 package pokerhands.logic;
 
-import java.util.Comparator;
 import java.util.List;
-import java.util.stream.IntStream;
 
+/**
+ * Represents a hand in five card poker. The hand can be compared
+ * with other hand.
+ * @param handType The type of the hand.
+ * @param occurrences The occurrences of the different card values in the hand.
+ */
 public record PokerHand(
         PokerHandType handType,
         List<CardValueOccurrence> occurrences

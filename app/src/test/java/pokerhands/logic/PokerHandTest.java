@@ -5,12 +5,10 @@ import java.util.Collections;
 import java.util.List;
 
 import static org.assertj.core.api.Assertions.*;
-import static pokerhands.logic.CardSuit.*;
 import static pokerhands.logic.CardValue.*;
 import static pokerhands.logic.PokerHandType.*;
 
 class PokerHandTest {
-
     @Test
     void compareTo_FirstHandTypeIsBetter_FirstHandWins() {
         var firstHand = new PokerHand(TWO_PAIRS, Collections.emptyList());

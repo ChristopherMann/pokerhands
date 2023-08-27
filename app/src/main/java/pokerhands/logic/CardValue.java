@@ -1,5 +1,8 @@
 package pokerhands.logic;
 
+/**
+ * Represents the value of a playing card.
+ */
 public enum CardValue {
     TWO,
     THREE,
