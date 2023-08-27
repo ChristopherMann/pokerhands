@@ -24,7 +24,7 @@ class PokerHandFactoryTest {
 
         var pokerHand = factory.createPokerHand(cards);
 
-        assertEquals(pokerHand.handType(), HIGH_CARD);
+        assertEquals(HIGH_CARD, pokerHand.handType());
     }
 
     @Test
@@ -38,7 +38,7 @@ class PokerHandFactoryTest {
 
         var pokerHand = factory.createPokerHand(cards);
 
-        assertEquals(pokerHand.handType(), PAIR);
+        assertEquals(PAIR, pokerHand.handType());
     }
 
     @Test
@@ -52,7 +52,7 @@ class PokerHandFactoryTest {
 
         var pokerHand = factory.createPokerHand(cards);
 
-        assertEquals(pokerHand.handType(), TWO_PAIRS);
+        assertEquals(TWO_PAIRS, pokerHand.handType());
     }
 
     @Test
@@ -66,7 +66,7 @@ class PokerHandFactoryTest {
 
         var pokerHand = factory.createPokerHand(cards);
 
-        assertEquals(pokerHand.handType(), THREE_OF_A_KIND);
+        assertEquals(THREE_OF_A_KIND, pokerHand.handType());
     }
 
     @Test
@@ -81,7 +81,7 @@ class PokerHandFactoryTest {
 
         var pokerHand = factory.createPokerHand(cards);
 
-        assertEquals(pokerHand.handType(), STRAIGHT);
+        assertEquals(STRAIGHT, pokerHand.handType());
     }
 
     @Test
@@ -95,7 +95,7 @@ class PokerHandFactoryTest {
 
         var pokerHand = factory.createPokerHand(cards);
 
-        assertEquals(pokerHand.handType(), FLUSH);
+        assertEquals(FLUSH, pokerHand.handType());
     }
 
     @Test
@@ -109,7 +109,7 @@ class PokerHandFactoryTest {
 
         var pokerHand = factory.createPokerHand(cards);
 
-        assertEquals(pokerHand.handType(), FULL_HOUSE);
+        assertEquals(FULL_HOUSE, pokerHand.handType());
     }
 
     @Test
@@ -123,7 +123,7 @@ class PokerHandFactoryTest {
 
         var pokerHand = factory.createPokerHand(cards);
 
-        assertEquals(pokerHand.handType(), FOUR_OF_A_KIND);
+        assertEquals(FOUR_OF_A_KIND, pokerHand.handType());
     }
 
     @Test
@@ -137,6 +137,6 @@ class PokerHandFactoryTest {
 
         var pokerHand = factory.createPokerHand(cards);
 
-        assertEquals(pokerHand.handType(), STRAIGHT_FLUSH);
+        assertEquals(STRAIGHT_FLUSH, pokerHand.handType());
     }
 }
