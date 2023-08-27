@@ -1,6 +1,5 @@
 package pokerhands.logic;
 
-import java.security.cert.CollectionCertStoreParameters;
 import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -9,7 +8,7 @@ import java.util.stream.IntStream;
 import static pokerhands.logic.PokerHandType.*;
 
 public class PokerHandFactory {
-    private  OccurrenceCounter occurrenceCounter;
+    private final OccurrenceCounter occurrenceCounter;
 
     public PokerHandFactory(OccurrenceCounter occurrenceCounter) {
         this.occurrenceCounter = occurrenceCounter;

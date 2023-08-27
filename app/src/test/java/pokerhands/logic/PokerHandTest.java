@@ -1,6 +1,7 @@
 package pokerhands.logic;
 
 import org.junit.jupiter.api.Test;
+
 import java.util.Collections;
 import java.util.List;
 
