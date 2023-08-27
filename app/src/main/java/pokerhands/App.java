@@ -11,24 +11,23 @@ import java.util.List;
 
 public class App {
     public static void main(String[] args) {
-        var factory = new PokerHandFactory(new OccurrenceCounter());
 
-        var hand1 = factory.createPokerHand(
-            List.of(new Card(CLUBS, TWO),
-                    new Card(CLUBS, THREE),
-                    new Card(CLUBS, FOUR),
-                    new Card(CLUBS, FIVE),
-                    new Card(CLUBS, SEVEN)));
+        var firstHand = List.of(
+                new Card(CLUBS, TWO),
+                new Card(CLUBS, THREE),
+                new Card(CLUBS, FOUR),
+                new Card(CLUBS, FIVE),
+                new Card(CLUBS, SEVEN));
 
-        var hand2 = factory.createPokerHand(
-                List.of(new Card(CLUBS, TWO),
-                        new Card(SPADES, TWO),
-                        new Card(CLUBS, THREE),
-                        new Card(DIAMONDS, TWO),
-                        new Card(HEARTS, THREE)));
+        var secondHand = List.of(
+                new Card(CLUBS, TWO),
+                new Card(SPADES, TWO),
+                new Card(CLUBS, THREE),
+                new Card(DIAMONDS, TWO),
+                new Card(HEARTS, THREE));
 
         String message;
-        int comparison = hand1.compareTo(hand2);
+        int comparison = CompareHands(firstHand, secondHand);
         if (comparison < 0) {
            message = "Hand 1 wins!";
         } else if (comparison > 0)  {
@@ -38,5 +37,12 @@ public class App {
         }
 
         System.out.println(message);
+    }
+
+    public static int CompareHands(List<Card> firstHand, List<Card> secondHand) {
+        var factory = new PokerHandFactory(new OccurrenceCounter());
+
+        return factory.createPokerHand(firstHand)
+                .compareTo(factory.createPokerHand((secondHand)));
     }
 }
